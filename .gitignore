@@ -1,0 +1,37 @@
+#
+#
+#                              iiii           tttt           iiii
+#                             i::::i       ttt:::t          i::::i
+#                              iiii        t:::::t           iiii
+#                                          t:::::t
+#            ggggggggg   gggggiiiiiiittttttt:::::ttttttt    iiiiiii    ggggggggg   gggggnnnn  nnnnnnnn       ooooooooooo   rrrrr   rrrrrrrrr       eeeeeeeeeeee
+#           g:::::::::ggg::::gi:::::it:::::::::::::::::t    i:::::i   g:::::::::ggg::::gn:::nn::::::::nn   oo:::::::::::oo r::::rrr:::::::::r    ee::::::::::::ee
+#         g:::::::::::::::::g i::::it:::::::::::::::::t     i::::i  g:::::::::::::::::gn::::::::::::::nn o:::::::::::::::or:::::::::::::::::r  e::::::eeeee:::::ee
+#        g::::::ggggg::::::gg i::::itttttt:::::::tttttt     i::::i g::::::ggggg::::::ggnn:::::::::::::::no:::::ooooo:::::orr::::::rrrrr::::::re::::::e     e:::::e
+#        g:::::g     g:::::g  i::::i      t:::::t           i::::i g:::::g     g:::::g   n:::::nnnn:::::no::::o     o::::o r:::::r     r:::::re:::::::eeeee::::::e
+#        g:::::g     g:::::g  i::::i      t:::::t           i::::i g:::::g     g:::::g   n::::n    n::::no::::o     o::::o r:::::r     rrrrrrre:::::::::::::::::e
+#        g:::::g     g:::::g  i::::i      t:::::t           i::::i g:::::g     g:::::g   n::::n    n::::no::::o     o::::o r:::::r            e::::::eeeeeeeeeee
+#        g::::::g    g:::::g  i::::i      t:::::t    tttttt i::::i g::::::g    g:::::g   n::::n    n::::no::::o     o::::o r:::::r            e:::::::e
+#        g:::::::ggggg:::::g i::::::i     t::::::tttt:::::ti::::::ig:::::::ggggg:::::g   n::::n    n::::no:::::ooooo:::::o r:::::r            e::::::::e
+# ......  g::::::::::::::::g i::::::i     tt::::::::::::::ti::::::i g::::::::::::::::g   n::::n    n::::no:::::::::::::::o r:::::r             e::::::::eeeeeeee
+# .::::.   gg::::::::::::::g i::::::i       tt:::::::::::tti::::::i  gg::::::::::::::g   n::::n    n::::n oo:::::::::::oo  r:::::r              ee:::::::::::::e
+# ......     gggggggg::::::g iiiiiiii         ttttttttttt  iiiiiiii    gggggggg::::::g   nnnnnn    nnnnnn   ooooooooooo    rrrrrrr                eeeeeeeeeeeeee
+#                    g:::::g                                                   g:::::g
+#        gggggg      g:::::g                                       gggggg      g:::::g
+#        g:::::gg   gg:::::g                                       g:::::gg   gg:::::g
+#         g::::::ggg:::::::g                                        g::::::ggg:::::::g
+#          gg:::::::::::::g                                          gg:::::::::::::g
+#             ggg::::::ggg                                              ggg::::::ggg
+#                gggggg                                                    gggggg
+#
+
+# ---------------------------------
+# Dependencies
+# ---------------------------------
+
+/node_modules
+
+# ---------------------------------
+# Environment Variables
+# ---------------------------------
+.env
