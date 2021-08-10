@@ -11,7 +11,7 @@ We assume that you have **node.js** installed on your machine. If that is not th
 
 ```bash
 # clone the repository
-git clone <this/git/repo>
+git clone https://github.com/Nootaku/simplemailserver.git
 
 # install node dependencies
 npm install
