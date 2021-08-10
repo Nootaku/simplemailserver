@@ -2,12 +2,12 @@
 FROM node:lts-alpine3.14
 
 # Labels:
-LABEL "maintainer"="maxwattez"
+LABEL "maintainer"="Nootaku"
 LABEL "version"="1.0.0"
 
 # Copy Node dependencies in /mailserver directory
 WORKDIR /mailserver
-COPY mailserver/package.json mailserver/package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Install node dependencies
 # --> set -eux; will stop the script if error during npm install
@@ -15,7 +15,7 @@ RUN set -eux; \
     npm install
 
 # Copy application files in /mailserver
-COPY mailserver/index.js ./
+COPY index.js ./
 
 # Declare environement variables
 ENV MAILSERVER_HOST=
