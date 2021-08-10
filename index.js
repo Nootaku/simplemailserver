@@ -60,11 +60,9 @@ function composeMail(requestObject) {
   const { name, email, company, message } = requestObject;
 
   let sender = {
-    name: req.body.name,
-    address: req.body.email,
+    name: name,
+    address: email,
   };
-  let company = req.body.company;
-  let message = req.body.message;
 
   let content = `
       <div class="navbar" style="width: calc(100% - 2em); display: flex; align-items: center; justify-content: flex-start; background-color: #4f596d; padding: 13px;">
