@@ -29,7 +29,9 @@ transporter.verify((error, success) => {
 function checkRequest(requestObject) {
   const { name, email, company, message } = requestObject;
   if (name == null || email == null || company == null || message == null) {
-    console.log("VALIDATION ERROR - One of the values in [name, email, company, message] is null.")
+    console.log(
+      "VALIDATION ERROR - One of the values in [name, email, company, message] is null."
+    );
     return {
       status: 422,
       message:
@@ -39,7 +41,9 @@ function checkRequest(requestObject) {
         (message == null ? "Message cannot be empty." : ""),
     };
   } else if (name === "" || email === "" || company === "" || message === "") {
-    console.log("VALIDATION ERROR - One of the values in [name, email, company, message] is an empty string.")
+    console.log(
+      "VALIDATION ERROR - One of the values in [name, email, company, message] is an empty string."
+    );
     return {
       status: 422,
       message:
@@ -49,8 +53,8 @@ function checkRequest(requestObject) {
         (message === "" ? "Message cannot be empty." : ""),
     };
   } else {
-    console.log("VALIDATION SUCCESS !")
-    console.log("... Now sending the email.")
+    console.log("VALIDATION SUCCESS !");
+    console.log("... Now bulding the email.");
     return {
       status: 200,
       message: "Valid request",
@@ -84,7 +88,9 @@ function composeMail(requestObject) {
     html: content,
   };
 
-  console.log("SUCCESS --  Email sent !")
+  console.log("SUCCESS --  Email built !");
+  console.log("... Now sending the email.");
+
   return mail;
 }
 
@@ -95,7 +101,9 @@ router.post("/send", (req, res, next) => {
   isInvalid = checker.status != 200;
   emailToSend = composeMail(req.body);
 
-  console.log(emailToSend.sender, emailToSend.message);
+  console.log("");
+  console.log(emailToSend.from, emailToSend.html);
+  console.log("");
 
   transporter.sendMail(emailToSend, (err, data) => {
     if (err || isInvalid) {
@@ -108,6 +116,7 @@ router.post("/send", (req, res, next) => {
         status: checker.status,
         message: checker.message,
       });
+      console.log("SUCCESS --  Email sent !");
     }
   });
 });
