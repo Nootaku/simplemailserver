@@ -29,6 +29,7 @@ transporter.verify((error, success) => {
 function checkRequest(requestObject) {
   const { name, email, company, message } = requestObject;
   if (name == null || email == null || company == null || message == null) {
+    console.log("VALIDATION ERROR - One of the values in [name, email, company, message] is null.")
     return {
       status: 422,
       message:
@@ -38,6 +39,7 @@ function checkRequest(requestObject) {
         (message == null ? "Message cannot be empty." : ""),
     };
   } else if (name === "" || email === "" || company === "" || message === "") {
+    console.log("VALIDATION ERROR - One of the values in [name, email, company, message] is an empty string.")
     return {
       status: 422,
       message:
@@ -47,6 +49,8 @@ function checkRequest(requestObject) {
         (message === "" ? "Message cannot be empty." : ""),
     };
   } else {
+    console.log("VALIDATION SUCCESS !")
+    console.log("... Now sending the email.")
     return {
       status: 200,
       message: "Valid request",
@@ -80,6 +84,7 @@ function composeMail(requestObject) {
     html: content,
   };
 
+  console.log("SUCCESS --  Email sent !")
   return mail;
 }
 
